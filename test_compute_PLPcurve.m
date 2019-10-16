@@ -125,7 +125,7 @@ parameterSoni.featureRate = featureRate;
 
 sonification = sonify_noveltyCurve(noveltyCurve,audio,parameterSoni);
 
-wavwrite(sonification,Fs,'sonification_novelty.wav')
+audiowrite('sonification_novelty.wav',sonification,Fs)
 
 
 parameterSoni = [];
@@ -134,7 +134,7 @@ parameterSoni.featureRate = featureRate;
 
 sonification = sonify_noveltyCurve(PLP,audio,parameterSoni);
 
-wavwrite(sonification,Fs,'sonification_PLP.wav')
+audiowrite('sonification_PLP.wav',sonification,Fs)
 
 
 %% 7, compute a PLP curve of a restricted tempo range
@@ -164,6 +164,6 @@ title('PLP curve (restricted)')
 
 sonification = sonify_noveltyCurve(PLP_restricted,audio,parameterSoni);
 
-wavwrite(sonification,Fs,'sonification_PLP-BPMrestricted.wav')
+audiowrite('sonification_PLP-BPMrestricted.wav',sonification,Fs)
 
 
